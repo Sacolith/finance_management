@@ -8,6 +8,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
+///This file is the main brain of the application it plugs in the providers
+///sets up the theme and routes.
 void main() {
   runApp(const MainApp());
 }
@@ -21,7 +23,7 @@ class MainApp extends StatelessWidget {
       ChangeNotifierProvider(create: (_)=> BudgetProvider()),
       ChangeNotifierProvider(create: (_)=> ExpenseProvider()),
       ChangeNotifierProvider(create: (_)=> GoalProvider()),
-      ChangeNotifierProvider(create: (_)=> ReportProvuder())
+      ChangeNotifierProvider(create: (_)=> ReportProvider())
     ],
     child: MaterialApp(
       

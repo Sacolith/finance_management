@@ -2,6 +2,7 @@ import 'package:finance_management/models/budget.dart';
 import 'package:finance_management/models/expence.dart';
 import 'package:flutter/material.dart';
 
+//Stores expanse values as list and distributres them to where they need to go
 class ExpenseProvider with ChangeNotifier{
   final List<Expense> _expenses=[];
 

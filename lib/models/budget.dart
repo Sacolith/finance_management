@@ -5,6 +5,7 @@ class Budget {
   final DateTime endDate;
   double spentAmount;
 
+//Budget blueprint used througout Application
   Budget({
     required this.id,
     required this.limit,

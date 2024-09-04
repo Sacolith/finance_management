@@ -26,6 +26,7 @@ class BudgetChartState extends State<BudgetChart> {
     upwardMotion();
   }
 
+//This is the method that controls the headache of an annimation to move upwards "slowly".
   void upwardMotion() {
     Future.delayed(Duration.zero, () {
       setState(() {
@@ -38,7 +39,7 @@ class BudgetChartState extends State<BudgetChart> {
   Widget build(BuildContext context) {
     final budgetProvider = Provider.of<BudgetProvider>(context);
     final budgets = budgetProvider.budgets;
-    //final up = MediaQuery.of(context).padding.top;
+    
 
     return budgets.isEmpty
         ? const Center(child: Text('No budget data available'))
@@ -50,6 +51,7 @@ class BudgetChartState extends State<BudgetChart> {
                   height: 300, // Define a specific height for the Stack
                   child: Stack(
                     children: [
+                      //This is where the animation starts to kick off upPosition is the vehicle
                       AnimatedPositioned(
                         top: upPosition,
                         left: 0,

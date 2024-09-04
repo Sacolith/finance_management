@@ -5,6 +5,7 @@ import 'package:finance_management/screens/goal_screen.dart';
 import 'package:finance_management/screens/report_screen.dart';
 import 'package:flutter/material.dart';
 
+//This file is the main.darts backup singer it controls the navigation with the bottomNavbar 
 class HomeScreen extends StatefulWidget{
   const HomeScreen({super.key});
 

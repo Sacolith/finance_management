@@ -5,6 +5,7 @@ import 'package:finance_management/screens/home_screen.dart';
 import 'package:finance_management/screens/report_screen.dart';
 import 'package:flutter/material.dart';
 
+//ROUTES
 class Routes{
   static Map<String, WidgetBuilder> getRoutes(){
     return{

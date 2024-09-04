@@ -10,7 +10,7 @@ class ReportGenerator extends StatelessWidget{
 const ReportGenerator({super.key});
 
 Future<void> _generateReport(BuildContext context) async {
-  final reportprovider= Provider.of<ReportProvuder>(context, listen: false);
+  final reportprovider= Provider.of<ReportProvider>(context, listen: false);
   final reports= reportprovider.reports;
 
   //Create PDf
@@ -43,7 +43,7 @@ Widget build(BuildContext context){
   return Column(
     children: <Widget>[
       Expanded(child: 
-      Consumer<ReportProvuder>(builder: (context, reportprovider, child){
+      Consumer<ReportProvider>(builder: (context, reportprovider, child){
         return ListView.builder(
           itemCount: reportprovider.reports.length,
           itemBuilder: (context, index){

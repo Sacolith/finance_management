@@ -1,3 +1,4 @@
+//expense blueprint used througout Application
 class Expense{
   final String id;
   final String title;

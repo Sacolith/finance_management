@@ -4,6 +4,7 @@ import 'package:finance_management/widgets/budget_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+
 class BudgetContent extends StatefulWidget {
   const BudgetContent({super.key});
 
@@ -53,6 +54,7 @@ class BudgetScreen extends State<BudgetContent> with SingleTickerProviderStateMi
       body: Column(
         children: <Widget>[
           if (!_isBudgetSet)
+          //This right here is the start of the second best animation of the app watch as all you money dissapears only to reappear as a circle
             FadeTransition(
               opacity: _animation,
               child: Column(

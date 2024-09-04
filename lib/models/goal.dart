@@ -1,3 +1,4 @@
+//Goal blueprint used througout Application
 class Goal{
   final String id;
   final String description;

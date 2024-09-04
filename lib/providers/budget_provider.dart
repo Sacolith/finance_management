@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../models/budget.dart';
 
+//Stores budget values as list and distributres them to where they need to go
 class BudgetProvider with ChangeNotifier{
   final List<Budget> _budgets= [];
   
