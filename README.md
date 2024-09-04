@@ -15,4 +15,7 @@ cd finance-management
 flutter pub get
 flutter run
 
+Contact:
+
+https://www.linkedin.com/in/sacqlain-brown-31b089269/
 
