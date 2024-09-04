@@ -1,3 +1,4 @@
+import 'package:finance_management/design/colors.dart';
 import 'package:finance_management/screens/budget_screen.dart';
 import 'package:finance_management/screens/expense_screen.dart';
 import 'package:finance_management/screens/goal_screen.dart';
@@ -15,8 +16,8 @@ class _HomeScreenState extends State<HomeScreen>{
   int _selectedIndex=0;
 
   static final List<Widget> _widgetOptions = <Widget>[
-    BudgetScreen(),
-    ExpenseScreen(),
+    const BudgetContent(),
+    const ExpensesScreen(),
     GoalScreen(),
     const ReportScreen(),
 ];
@@ -30,8 +31,9 @@ void _onItemTapped(int index){
 @override
 Widget build(BuildContext context){
   return Scaffold(
+    backgroundColor: Colors.black,
     appBar: AppBar(
-      title: const Text('Finance Management'),
+      title: const Text('Sunrise Financials'),
     ),
     body: Center(
       child: _widgetOptions.elementAt(_selectedIndex),
@@ -39,16 +41,21 @@ Widget build(BuildContext context){
     bottomNavigationBar: BottomNavigationBar(
       items: const <BottomNavigationBarItem>[
 BottomNavigationBarItem(
-  icon: Icon(Icons.account_balance_wallet,color: Colors.red,),
+  backgroundColor: Cols.sailorBlue,
+  icon: Icon(Icons.account_balance_wallet,
+  ),
   label: 'budget'),
   BottomNavigationBarItem(
-  icon: Icon(Icons.money,color: Colors.red,),
+  icon: Icon(Icons.money,
+  ),
   label: 'Expenses'),
   BottomNavigationBarItem(
-  icon: Icon(Icons.flag,color: Colors.red,),
+  icon: Icon(Icons.flag,
+  ),
   label: 'Goals'),
   BottomNavigationBarItem(
-  icon: Icon(Icons.bar_chart,color: Colors.red,),
+  icon: Icon(Icons.bar_chart,
+  ),
   label: 'Reports')
       ],
       currentIndex: _selectedIndex,

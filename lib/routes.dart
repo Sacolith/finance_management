@@ -9,8 +9,8 @@ class Routes{
   static Map<String, WidgetBuilder> getRoutes(){
     return{
      '/':(context)=> const HomeScreen(),
-     '/expenses':(context)=>  ExpenseScreen(),
-     'buudget':(context)=> BudgetScreen(),
+     '/expenses':(context)=>  const ExpensesScreen(),
+     'buudget':(context)=> const BudgetContent(),
      '/goals':(context)=> GoalScreen(),
      'report':(context)=> const ReportScreen(),
     };

@@ -1,7 +1,20 @@
-class Budget{
+class Budget {
   final String id;
-  final double limit;
-  final DateTime startTate;
+  double limit;
+  final DateTime startDate;
   final DateTime endDate;
-  Budget({required this.id, required this.limit, required this.startTate, required this.endDate});
+  double spentAmount;
+
+  Budget({
+    required this.id,
+    required this.limit,
+    required this.startDate,
+    required this.endDate,
+    this.spentAmount = 0,
+  });
+
+  void subtractExpense(double amount) {
+    limit -= amount;
+    spentAmount += amount;
   }
+}

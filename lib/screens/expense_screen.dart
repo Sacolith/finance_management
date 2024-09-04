@@ -4,12 +4,20 @@ import 'package:finance_management/widgets/expense_list.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class ExpenseScreen extends StatelessWidget{
-   ExpenseScreen({super.key});
+class ExpensesScreen extends StatefulWidget{
+const ExpensesScreen({super.key});
+
+@override
+State<ExpensesScreen> createState()=> ExpenseState();
+}
+
+class ExpenseState extends State<ExpensesScreen>{
+   
   final TextEditingController _titleController= TextEditingController();
   final TextEditingController _amountController= TextEditingController();
 
-  @override
+
+ @override
 Widget build(BuildContext context){
   return Scaffold(
     appBar: AppBar(
@@ -38,9 +46,10 @@ Widget build(BuildContext context){
             id: DateTime.now().toString(),
             title: _titleController.text,
             amount: double.parse(_amountController.text),
-            date: DateTime.now()
-          );
+            date: DateTime.now(),
+             budgetId: '');
           Provider.of<ExpenseProvider>(context, listen: false).addExpense(expense);
+          
         }, child: const Text('Add Expense')
         ),
         const Expanded(child: ExpenseList(),)

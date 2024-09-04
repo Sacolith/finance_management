@@ -10,4 +10,10 @@ class BudgetProvider with ChangeNotifier{
   _budgets.add(budget);
   notifyListeners();
   }
+
+   void setBudgets(List<Budget> budgets) {
+    budgets = budgets;
+    notifyListeners();
+    
+  }
 }
