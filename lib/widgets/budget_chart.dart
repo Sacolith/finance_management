@@ -1,8 +1,6 @@
 import 'package:finance_management/main.dart';
 import 'package:finance_management/providers/budget_provider.dart';
-import 'package:finance_management/widgets/expense_list.dart';
-import 'package:finance_management/widgets/goal_progress.dart';
-import 'package:finance_management/widgets/report_generator.dart';
+import 'package:finance_management/widgets/screens_display.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -66,12 +64,13 @@ class BudgetChartState extends State<BudgetChart> {
       final value = budget.limit;  
       return PieChartSectionData(
         value: value,
-        title: '\$${value.toStringAsFixed(2)}',titleStyle: const TextStyle(color: Colors.white),
+        title: '\$${value.toStringAsFixed(2)}',
+        titleStyle: const TextStyle(color: Colors.white),
         color: thyme().hintColor,  
       );
     }).toList(),
-    sectionsSpace: 0,
-    centerSpaceRadius: 45,
+    sectionsSpace: 7,
+    centerSpaceRadius: 90,
     borderData: FlBorderData(show: false),
     pieTouchData: PieTouchData(
       touchCallback: (pieTouchResponse, _) {},
@@ -85,47 +84,7 @@ class BudgetChartState extends State<BudgetChart> {
                   ),
                 ),
                 const SizedBox(height: 20),
-                const Padding(
-                  padding:  EdgeInsets.symmetric(horizontal: 16.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Flexible(
-                        child: Card(
-                          color:Colors.green,
-                          shadowColor: Colors.purple,
-                          child: SizedBox(
-                            height: 200,
-                            width: 200,
-                            child: ExpenseList(),
-                          ),
-                        ),
-                      ),
-                      Flexible(
-                        child: Card(
-                          color: Colors.blue,
-                          shadowColor: Colors.black,
-                          child: SizedBox(
-                            height: 200,
-                            width: 200,
-                            child: GoalProgress(),
-                          ),
-                        ),
-                      ),
-                      Flexible(
-                        child: Card(
-                          color: Colors.amber,
-                          shadowColor: Color.fromARGB(255, 35, 27, 3),
-                          child: SizedBox(
-                            height: 200,
-                            width: 200,
-                            child: ReportGenerator(),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+               const ScreensDisplay()
               ],
             ),
           );

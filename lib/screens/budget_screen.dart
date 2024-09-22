@@ -61,12 +61,19 @@ class BudgetScreen extends State<BudgetContent> with SingleTickerProviderStateMi
                 children: [
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: TextField(
+                    child: Container(
+                      
+                      decoration: BoxDecoration(color: Colors.white,
+                      borderRadius: BorderRadius.circular(15),
+                      border: Border.all()
+                      ),
+                      child:TextField(
                       controller: _limitController,
-                      decoration: const InputDecoration(labelText: 'Budget Limit'),
+                      decoration: const InputDecoration(labelText: 'Budget Limit',
+                      border: InputBorder.none),
                       keyboardType: TextInputType.number,
                     ),
-                  ),
+                  ),),
                   ElevatedButton(
                     onPressed: () {
                       if (_limitController.text.isEmpty) {

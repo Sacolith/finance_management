@@ -34,7 +34,7 @@ Widget build(BuildContext context){
   return Scaffold(
     backgroundColor: Colors.black,
     appBar: AppBar(
-      title: const Text('Sunrise Financials'),
+      title: const Text('Sunrise Financials',style: TextStyle(color: Colors.white),),
     ),
     body: Center(
       child: _widgetOptions.elementAt(_selectedIndex),

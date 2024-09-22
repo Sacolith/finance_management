@@ -26,17 +26,28 @@ Widget build(BuildContext context){
     body: Column(
       children: <Widget>[
          Padding(padding: const EdgeInsets.all(8.0),
-        child: TextField(
+      child: Container(
+                      decoration: BoxDecoration(color: Colors.white,
+                      borderRadius: BorderRadius.circular(15),
+                      border: Border.all()
+                      ), child: TextField(
           controller: _titleController,
-          decoration:  const InputDecoration(labelText: 'Expense Title'),
-        ),
+          decoration:  const InputDecoration(labelText: 'Expense Title',
+          border: InputBorder.none),
+        ),)
         ),
         Padding(padding:  const EdgeInsets.all(8.0),
-        child: TextField(
+        child :Container(
+                      decoration: BoxDecoration(color: Colors.white,
+                      borderRadius: BorderRadius.circular(15),
+                      border: Border.all()
+                      ),child: TextField(
           controller: _amountController,
-          decoration: const InputDecoration(labelText: 'Expense Amount'),
+          decoration: const InputDecoration(labelText: 'Expense Amount', 
+          border: InputBorder.none ),
           keyboardType: TextInputType.number,
         ),
+        )
         ),
         ElevatedButton(onPressed: (){
           if(_titleController.text.isEmpty || _amountController.text.isEmpty){

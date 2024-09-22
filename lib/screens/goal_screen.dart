@@ -16,17 +16,28 @@ class GoalScreen extends StatelessWidget{
       body: Column(
         children: <Widget>[
 Padding(padding: const EdgeInsets.all(8.0),
-child: TextField(
+child:
+Container(                      
+                      decoration: BoxDecoration(color: Colors.white,
+                      borderRadius: BorderRadius.circular(15),
+                      border: Border.all()
+                      ),child: TextField(
   controller: _descriptionController,
-  decoration: const InputDecoration(labelText: 'Goal Description'),
-),
+  decoration: const InputDecoration(labelText: 'Goal Description',
+  border: InputBorder.none),
+),)
 ),
 Padding(padding: const EdgeInsets.all(8.0),
-child: TextField(
+child:Container( 
+                      decoration: BoxDecoration(color: Colors.white,
+                      borderRadius: BorderRadius.circular(15),
+                      border: Border.all()
+                      ),child: TextField(
   controller: _amountController,
-  decoration: const InputDecoration(labelText: 'Target Amt'),
+  decoration: const InputDecoration(labelText: 'Target Amt',
+  border: InputBorder.none),
   keyboardType: TextInputType.number,
-),
+),)
 ),
 ElevatedButton(onPressed: (){
   if(_descriptionController.text.isEmpty || _amountController.text.isEmpty){
