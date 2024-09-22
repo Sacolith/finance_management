@@ -1,6 +1,5 @@
 # finance_management
-(Sorry this project has no comments yet i am tired..)
-A new Flutter project.
+A Finance Manager Made in flutter.
 
 Description: A Flutter-Based Finance Management App that helps to keep track of expenses, set financial goals, and gives Financial Reports.
 
@@ -9,6 +8,8 @@ Description: A Flutter-Based Finance Management App that helps to keep track of 
 
 Skills Demonstrated: Data security, user data analytics, and financial calculation algorithms.
 
+Packages: fl_chart,pdf, Provider, shared_preferences
+ 
 Installation:
 git clone https://github.com/Sacolith/finance_management
 cd finance-management
